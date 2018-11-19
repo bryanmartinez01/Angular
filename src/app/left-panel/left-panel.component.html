@@ -1,0 +1,61 @@
+<div class="container-flex p-2">
+	<br />
+	<div class="row text-center">
+		<div class="col">
+			<img src="../../assets/img/av.png" height="50px" width="50px" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col text-center">
+			<span><b>Username</b></span>
+		</div>
+	</div>
+	<br />
+	<br />
+	<mat-accordion>	
+ 		<mat-expansion-panel>
+    		<mat-expansion-panel-header>
+    			<mat-panel-title><img src="../assets/img/quo.png" height="25px" width="25px">&nbsp;&nbsp;Quotation</mat-panel-title>
+    		</mat-expansion-panel-header>
+    		<a routerLink="quotationprocessing" class="menuLink" (click)="replaceHeader($event)">Quotation Processing</a>
+    		<br/>
+    		<a routerLink="quotationinquiry" class="menuLink" (click)="replaceHeader($event)">Quotation Inquiry</a>
+  		</mat-expansion-panel>
+	
+ 		<mat-expansion-panel>
+    		<mat-expansion-panel-header>
+    			<mat-panel-title><img src="../assets/img/und.png" height="25px" width="25px">&nbsp;&nbsp;Underwriting</mat-panel-title>
+    		</mat-expansion-panel-header>
+    		<a routerLink="underwriting1" class="menuLink" (click)="replaceHeader($event)">Underwriting One</a>
+    		<br/>
+    		<a routerLink="underwriting2" class="menuLink" (click)="replaceHeader($event)">Underwriting Two</a>
+  		</mat-expansion-panel>
+
+  		<mat-expansion-panel>
+    		<mat-expansion-panel-header>
+    			<mat-panel-title><img src="../assets/img/acc.png" height="25px" width="25px">&nbsp;&nbsp;Accounting</mat-panel-title>
+    		</mat-expansion-panel-header>
+    		<a routerLink="accounting1" class="menuLink" (click)="replaceHeader($event)">Accounting One</a>
+    		<br/>
+    		<a routerLink="accounting2" class="menuLink" (click)="replaceHeader($event)">Accounting Two</a>
+  		</mat-expansion-panel>
+	
+ 		<mat-expansion-panel>
+    		<mat-expansion-panel-header>
+      			<mat-panel-title><img src="../assets/img/claims.png" height="25px" width="25px">&nbsp;&nbsp;Claims</mat-panel-title>
+    		</mat-expansion-panel-header>
+    		<a routerLink="claims1" class="menuLink" (click)="replaceHeader($event)">Claims One</a>
+    		<br/>
+    		<a routerLink="claims2" class="menuLink" (click)="replaceHeader($event)">Claims Two</a>
+  		</mat-expansion-panel>
+		
+ 		<mat-expansion-panel>
+    		<mat-expansion-panel-header>
+      			<mat-panel-title><img src="../assets/img/sec.png" height="25px" width="25px">&nbsp;&nbsp;Security</mat-panel-title>
+    		</mat-expansion-panel-header>
+    		<a routerLink="security1" class="menuLink" (click)="replaceHeader($event)">Security One</a>
+    		<br/>
+    		<a routerLink="security2" class="menuLink" (click)="replaceHeader($event)">Security Two</a>
+  		</mat-expansion-panel>
+	</mat-accordion>
+</div>

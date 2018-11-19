@@ -1,0 +1,31 @@
+.btn{
+	background-color: #4c4c4c;
+	max-height: 25px;
+	line-height: 25px;
+	color: white;
+}
+
+.btn:HOVER{
+	background-color: #006df0;
+}
+
+mat-form-field#search {
+  font-size: 10px;
+}
+
+mat-form-field.txtarea {
+  width: 40%;
+}
+
+#edit:HOVER{
+	content: url("../../assets/img/edit_blue.png");
+}
+
+#delete:HOVER{
+	content: url("../../assets/img/del_blue.png");
+}
+
+th{
+	background-color: #4c4c4c;
+	color: white;
+}

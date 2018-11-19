@@ -1,0 +1,143 @@
+<div class="container-flex">
+	<div class="row">
+		<div class="col-md-9">
+		</div>
+		<div class="col-md-3">
+			<button class="btn m-1" mat-raised-button>Back</button>
+			<button class="btn m-1" mat-raised-button>Save</button>
+			<button class="btn m-1" mat-raised-button>Cancel</button>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-8">
+			<span class="align-bottom"><button class="btn m-1" mat-raised-button>Add</button></span>
+			<span class="align-bottom"><button class="btn m-1" mat-raised-button>Delete</button></span>
+		</div>
+		<div class="col-md-2">
+			<mat-form-field id="search" appearance="outline">
+				<mat-label>Search</mat-label>
+				<input matInput placeholder="Cover Code, Section, Bullet No., etc." />	
+			</mat-form-field>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+  			<table mat-table [dataSource]="dataSource" style="width: 100%">
+    			<ng-container matColumnDef="strSelect">
+      				<th mat-header-cell *matHeaderCellDef> <input type="checkbox" name="chck"/> </th>
+      				<td mat-cell *matCellDef="let element"> <input type="checkbox" /> </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="coverCode">
+      				<th mat-header-cell *matHeaderCellDef> Cover Code </th>
+      				<td mat-cell *matCellDef="let element"> {{element.coverCode}} </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="section">
+      				<th mat-header-cell *matHeaderCellDef> Section </th>
+      				<td mat-cell *matCellDef="let element"> {{element.section}} </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="bulletNo">
+      				<th mat-header-cell *matHeaderCellDef> Bullet No. </th>
+      				<td mat-cell *matCellDef="let element"> {{element.bulletNo}} </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="sumInsured">
+      				<th mat-header-cell *matHeaderCellDef> Sum Insured </th>
+      				<td mat-cell *matCellDef="let element"> {{element.sumInsured}} </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="sortSe">
+      				<th mat-header-cell *matHeaderCellDef> Sort Se </th>
+      				<td mat-cell *matCellDef="let element"> {{element.sortSe}} </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="addSi">
+      				<th mat-header-cell *matHeaderCellDef> Add SI </th>
+      				<td mat-cell *matCellDef="let element"> <input type="checkbox" /> </td>
+    			</ng-container>
+
+    			<ng-container matColumnDef="actions">
+      				<th mat-header-cell *matHeaderCellDef> Actions </th>
+      				<td mat-cell *matCellDef="let element">
+      					<img id="edit" class="m-1 btnIco" src="../assets/img/edit.png" height="20px" width="20px">
+      					<img id="delete" class="m-1 btnIco" src="../assets/img/del.png" height="20px" width="20px">
+      				</td>
+    			</ng-container>
+
+    			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  			</table>
+
+  			<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  		</div>
+  		<div class="col-md-1"></div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-4">
+					<mat-form-field appearance="outline">
+						<mat-label>Total Sum Insured Section I</mat-label>
+						<input matInput placeholder="Total Sum Insured Section I" value="50,000,000.00" disabled="disabled" />	
+					</mat-form-field>
+				</div>
+				<div class="col-md-4">
+					<mat-form-field appearance="outline">
+						<mat-label>Section II</mat-label>
+						<input matInput placeholder="Section II" value="0.00" disabled="disabled" />	
+					</mat-form-field>
+				</div>	
+				<div class="col-md-4">
+					<mat-form-field appearance="outline">
+						<mat-label>Section III</mat-label>
+						<input matInput placeholder="Section III" value="0.00" disabled="disabled" />	
+					</mat-form-field>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<mat-form-field appearance="outline">
+				<mat-label>Currency</mat-label>
+				<mat-select placeholder="Currency">
+    				<mat-option>Option 1</mat-option>
+    				<mat-option>Option 2</mat-option>
+    				<mat-option>Option 3</mat-option>
+  				</mat-select>
+			</mat-form-field>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<mat-form-field appearance="outline" class="txtarea">
+				<mat-label>Deductibles</mat-label>
+				<textarea matInput placeholder="Place deductibles here">Deductible applicable to entire quote, if any</textarea>	
+			</mat-form-field>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<mat-form-field appearance="outline" class="txtarea">
+				<mat-label>Remarks</mat-label>
+				<textarea matInput placeholder="Place remarks here">Various remarks</textarea>	
+			</mat-form-field>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>

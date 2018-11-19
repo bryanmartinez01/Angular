@@ -1,0 +1,18 @@
+.menuLink{
+	color: white;
+	font-size: 12px;
+}
+
+mat-expansion-panel{
+	background-color: #4c4c4c;
+	min-height: 50px;
+	min-width: 190px;
+}
+
+mat-expansion-panel:HOVER{
+	background-color: #006df0;
+}
+
+mat-panel-title{
+	color: white;
+}

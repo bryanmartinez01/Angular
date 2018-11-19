@@ -1,0 +1,25 @@
+.breadcrumb {
+	background-color: white;
+	font-size: 20px;
+	max-height: 20px;
+}
+
+#ico0:HOVER{
+	content: url("../../assets/img/pc_blue.png");
+}
+
+#ico1:HOVER{
+	content: url("../../assets/img/refresh_blue.png");
+}
+
+#ico2:HOVER{
+	content: url("../../assets/img/win_blue.png");
+}
+
+#ico3:HOVER{
+	content: url("../../assets/img/set_blue.png");
+}
+
+.nav-item{
+	color: #9ecdef;
+}

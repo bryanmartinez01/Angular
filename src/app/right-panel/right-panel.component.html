@@ -1,0 +1,39 @@
+<div class="container-flex p-3">
+	<div class="row">
+		<div class="col-10 btnIco">
+			<img id="ico0" src="../../assets/img/pc.png" height="20px" width="20px" />
+		</div>
+		<div class="col-2">
+			<div class="row">
+				<div class="col-4 btnIco">
+					<img id="ico1" src="../../assets/img/refresh.png" height="20px" width="20px" />		
+				</div>
+				<div class="col-4 btnIco">
+					<img id="ico2" src="../../assets/img/win.png" height="20px" width="20px" />
+				</div>
+				<div class="col-4 btnIco">
+					<img id="ico3" src="../../assets/img/set.png" height="20px" width="20px" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-flex">
+	<div class="row" style="background-color: white; min-height: 90px;">
+		<div class="col">
+			<nav aria-label="breadcrumb">
+  				<ol class="breadcrumb">
+    				<li class="breadcrumb-item" *ngFor="let tab of currentHeader"><b>{{ tab }}</b></li>
+  				</ol>
+  				<ul class="nav">
+  					<li class="nav-item" *ngFor="let sm of submenu"><a class="nav-link" href="#">{{ sm }}</a></li>
+  				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<br />
+<div class="container-flex">
+	<router-outlet></router-outlet>	
+</div>
